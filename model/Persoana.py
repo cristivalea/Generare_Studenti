@@ -7,7 +7,7 @@ class Persoana:
     def __init__(self, sex, varsta):
         if varsta < 18:
             raise Exception("Varsta invalida")
-        nrNumeFamilie = random.randint(1,38625)
+        nrNumeFamilie = random.randint(1,38265)
         nume = []
         file = open("NumeFamilieF.txt", "r", encoding="utf-8")
         if file == None:
@@ -37,16 +37,16 @@ class Persoana:
         data_curenta = dateutil.utils.today()
         an = data_curenta.year
         an_nastere = an - varsta
-        luna_nastere = random.randint(1, 13)
+        luna_nastere = random.randint(1, 12)
         zi_nastere = 0
         if luna_nastere in [1, 3, 5, 7, 8, 10, 12]:
-            zi_nastere = random.randint(1, 32)
-        elif luna_nastere in [4, 6, 9, 11]:
             zi_nastere = random.randint(1, 31)
-        elif luna_nastere == 2 and an_nastere % 4 == 0:
+        elif luna_nastere in [4, 6, 9, 11]:
             zi_nastere = random.randint(1, 30)
-        elif luna_nastere == 2:
+        elif luna_nastere == 2 and an_nastere % 4 == 0:
             zi_nastere = random.randint(1, 29)
+        elif luna_nastere == 2:
+            zi_nastere = random.randint(1, 28)
         data_nastere = date(an_nastere, luna_nastere, zi_nastere)
         self.__data_nastere = data_nastere
         self.__varsta = varsta

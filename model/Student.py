@@ -30,12 +30,6 @@ class Student(Persoana):
     def get_nr_matricol(self):
         return self.__nr_matricol
 
-    def generare_data_inmatriculare(self, data_start, data_end):
-        diferenta_zile = (data_end - data_start).days
-        zile_aleatoare = random.randint(0, diferenta_zile)
-        data_inmatriculare = data_start + timedelta(days=zile_aleatoare)
-        return data_inmatriculare
-
     def get_data_inmatriculare(self):
         return self.__data_inmatriculare
 
