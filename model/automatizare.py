@@ -3,6 +3,8 @@ import random
 
 class Persoana:
     def __init__(self, sex, varsta):
+        if varsta < 18:
+            raise Exception("Varsta invalida")
         nrNumeFamilie = random.randint(1,38625)
         nume = []
         file = open("NumeFamilieF.txt", "r", encoding="utf-8")
@@ -32,7 +34,7 @@ class Persoana:
     def __repr__(self):
         return self.__numeFamilie + " " + self.__prenume
 
-p1 = Persoana('M', 23)
+p1 = Persoana('M', 22)
 p2= Persoana('F', 19)
 print(p1)
 print(p2)
