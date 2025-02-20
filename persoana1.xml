@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" ?>
+<Lista_Persoane>
+	<Persoana IdPersoana="1820521350068">
+		<Nume Length="1">Aritoni</Nume>
+		<Prenume Lehgth="2">Ovidiu Constantin</Prenume>
+		<Sex>Masculin</Sex>
+		<CNP>1820521350068</CNP>
+		<DataNasterii>
+			<Data>
+				<An>1982</An>
+				<Luna>
+					<month nr="3" ro="mai" en="may"/>
+				</Luna>
+				<Zi>21</Zi>
+			</Data>
+		</DataNasterii>
+	</Persoana>
+</Lista_Persoane>
