@@ -1,0 +1,11 @@
+D:\PYTHON\Generare_Studenti_Local\imagini\B1.jpg
+D:\PYTHON\Generare_Studenti_Local\imagini\B2.jpg
+D:\PYTHON\Generare_Studenti_Local\imagini\B3.jpg
+D:\PYTHON\Generare_Studenti_Local\imagini\B4.jpg
+D:\PYTHON\Generare_Studenti_Local\imagini\B5.jpg
+D:\PYTHON\Generare_Studenti_Local\imagini\B6.jpg
+D:\PYTHON\Generare_Studenti_Local\imagini\B7.jpg
+D:\PYTHON\Generare_Studenti_Local\imagini\B8.jpg
+D:\PYTHON\Generare_Studenti_Local\imagini\B9.jpg
+D:\PYTHON\Generare_Studenti_Local\imagini\F1.jpg
+D:\PYTHON\Generare_Studenti_Local\imagini\F2.jpg
