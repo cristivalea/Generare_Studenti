@@ -28,7 +28,7 @@ class Persoana:
         else:
             for linie in file:
                 pren.append(linie)
-        print(nr_prenume)
+        #print(nr_prenume)
         self.__prenume = ""
         for i in range(nr_prenume):
             index_prenume = random.randint(0, len(pren)-1)

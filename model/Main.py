@@ -11,13 +11,14 @@ def inscriere_facultate(data_start, data_end):
     pentru o zi jumatate sunt fete si jumatate baieti
     baietii si fetele se adauga in lista
     '''
-    pass
     lista_studenti = []
     diferenta_zile = (data_end - data_start).days
+    print(diferenta_zile)
     if diferenta_zile == 0:
         raise Exception("Datele coincid")
     for i in range(diferenta_zile + 1):
-        data_inmatriculare = data_start + timedelta(days=i)
+        data_inmatriculare = date(data_start.year, data_start.month, data_start.day + i)
+        print(data_inmatriculare)
         numar_studenti = random.randint(100, 150)
         numar_baieti = numar_studenti // 2
         numar_fete = numar_studenti - numar_baieti
@@ -29,7 +30,7 @@ def inscriere_facultate(data_start, data_end):
             student = Student('F', random.randint(18, 25), data_inmatriculare)
             lista_studenti.append(student)
 
-        return lista_studenti
+    return lista_studenti
 
 start = date(2024, 2, 1)
 end = date(2024, 2, 15)

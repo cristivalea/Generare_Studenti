@@ -47,6 +47,3 @@ class Student(Persoana):
         persoana_info = super().__repr__()
         return f"{persoana_info}, Numar matricol: {self.__nr_matricol}, Data inmatriculare: {self.__data_inmatriculare}"
 
-
-student1 = Student('M', 20, date.today())
-print(student1)
