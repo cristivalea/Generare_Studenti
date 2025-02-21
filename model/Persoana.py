@@ -14,7 +14,7 @@ class Persoana:
             raise Exception("Fisierul nu a putut fi deschis")
         else:
             for linie in file:
-                nume.append(linie)
+                nume.append(linie.strip())
 
         self.__numeFamilie = nume[nrNumeFamilie]
         nr_prenume = random.randint(1, 5)
@@ -27,7 +27,7 @@ class Persoana:
             raise Exception("fisierul de prenume nu a putut fi deschis")
         else:
             for linie in file:
-                pren.append(linie)
+                pren.append(linie.strip())
         #print(nr_prenume)
         self.__prenume = ""
         for i in range(nr_prenume):

@@ -24,19 +24,38 @@ def inscriere_facultate(data_start, data_end):
         numar_fete = numar_studenti - numar_baieti
         for b in range(numar_baieti):
             student = Student('M', random.randint(18, 25), data_inmatriculare)
-            lista_studenti.append(student)
+            if student not in lista_studenti:
+                lista_studenti.append(student)
 
         for f in range(numar_fete):
             student = Student('F', random.randint(18, 25), data_inmatriculare)
-            lista_studenti.append(student)
+            if student not in lista_studenti:
+                lista_studenti.append(student)
 
     return lista_studenti
 
+def lista_to_json(lista_studenti, data_start, data_end):
+    cale_json = ""
+    f = open("json_studenti.txt", "w", encoding="utf-8")
+    for student in lista_studenti:
+        j = student.prepare()
+        lista_prenume = student.get_prenume().split()
+        str_student = "D:\\PYTHON\\Generare_Studenti_Local\\Studenti_JSON\\"
+        str_student += student.get_numeFamilie() + "_" + lista_prenume[0] + "_" + str(student.get_data_nastere().day) + "_"
+        str_student += str(student.get_data_nastere().month) + "_" + str(student.get_data_nastere().year) + '.json\n'
+        writer1 = f.writelines(str_student)
+        f1 = open(str_student.strip(), "w", encoding="utf-8")
+        writer = f1.writelines(student.prepare())
+    return cale_json
+
+
 start = date(2024, 2, 1)
-end = date(2024, 2, 15)
-studenti = inscriere_facultate(start, end)
+end = date(2024, 2, 3)
+# studenti = inscriere_facultate(start, end)
+#
+# for student in studenti:
+#     print(student)
+#
+# print(f"Total studenti înscriși: {len(studenti)}")
 
-for student in studenti:
-    print(student)
-
-print(f"Total studenti înscriși: {len(studenti)}")
+lista_to_json(inscriere_facultate( start, end), start, end)
