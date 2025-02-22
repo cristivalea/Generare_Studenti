@@ -235,7 +235,7 @@ class Student(Persoana):
             "Prenume": self.get_prenume(),
             "CNP": self.get_cnp(),
             "Serie Buletin": self.get_serie_buletin(),
-            "Numar Prenume": self.get_nr_buletin(),
+            "Numar Buletin": self.get_nr_buletin(),
             "Adresa": {
                 "Oras": self.generare_adresa().getOras(),
                 "Strada": self.get_adresa().getStrada(),

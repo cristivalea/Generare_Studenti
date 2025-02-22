@@ -39,7 +39,7 @@ def lista_to_json(lista_studenti, data_start, data_end):
     f = open("json_studenti.txt", "w", encoding="utf-8")
     for student in lista_studenti:
         j = student.prepare()
-        lista_prenume = student.get_prenume().split()
+        lista_prenume = student.get_prenume()
         str_student = "D:\\PYTHON\\Generare_Studenti_Local\\Studenti_JSON\\"
         str_student += student.get_numeFamilie() + "_" + lista_prenume[0] + "_" + str(student.get_data_nastere().day) + "_"
         str_student += str(student.get_data_nastere().month) + "_" + str(student.get_data_nastere().year) + '.json\n'
