@@ -33,6 +33,7 @@ class Persoana:
         for i in range(nr_prenume):
             index_prenume = random.randint(0, len(pren)-1)
             self.__prenume += pren[index_prenume]
+            self.__prenume += " "
 
         data_curenta = dateutil.utils.today()
         an = data_curenta.year
