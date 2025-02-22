@@ -295,10 +295,9 @@ class Student(Persoana):
             "Cale_poza": self.__cale_poze
         }
         j = json.dumps(x, ensure_ascii= False)
-        print(j)
         return j
 
-student = Student('M', 23, date(2024, 2, 1))
-student2 = Student('F', 21, date(2024, 2, 3))
-student.prepare()
-student2.prepare()
+# student = Student('M', 23, date(2024, 2, 1))
+# student2 = Student('F', 21, date(2024, 2, 3))
+# student.prepare()
+# student2.prepare()

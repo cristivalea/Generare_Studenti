@@ -43,7 +43,7 @@ def lista_to_json(lista_studenti, data_start, data_end):
         str_student = "D:\\PYTHON\\Generare_Studenti_Local\\Studenti_JSON\\"
         str_student += student.get_numeFamilie() + "_" + lista_prenume[0] + "_" + str(student.get_data_nastere().day) + "_"
         str_student += str(student.get_data_nastere().month) + "_" + str(student.get_data_nastere().year) + '.json\n'
-        writer1 = f.writelines(str_student)
+        writer1 = f.write(str_student)
         f1 = open(str_student.strip(), "w", encoding="utf-8")
         writer = f1.writelines(student.prepare())
     return cale_json
@@ -59,3 +59,4 @@ end = date(2024, 2, 3)
 # print(f"Total studenti înscriși: {len(studenti)}")
 
 lista_to_json(inscriere_facultate( start, end), start, end)
+
