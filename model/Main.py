@@ -2,6 +2,8 @@ import random
 from datetime import date, timedelta
 
 from model.Student import Student
+
+
 def inscriere_facultate(data_start, data_end):
     '''
     :param data_start:
@@ -16,19 +18,22 @@ def inscriere_facultate(data_start, data_end):
     print(diferenta_zile)
     if diferenta_zile == 0:
         raise Exception("Datele coincid")
+
     for i in range(diferenta_zile + 1):
-        data_inmatriculare = date(data_start.year, data_start.month, data_start.day + i)
-        print(data_inmatriculare)
+        data_inmatriculare = data_start + timedelta(days=i)
         numar_studenti = random.randint(100, 150)
         numar_baieti = numar_studenti // 2
         numar_fete = numar_studenti - numar_baieti
-        for b in range(numar_baieti):
-            student = Student('M', random.randint(18, 25), data_inmatriculare)
-            if student not in lista_studenti:
-                lista_studenti.append(student)
 
-        for f in range(numar_fete):
-            student = Student('F', random.randint(18, 25), data_inmatriculare)
+        for _ in range(numar_baieti + numar_fete):
+            while True:  # Asigură că data de naștere >= 1924
+                varsta = random.randint(18, 25)
+                anul_nasterii = data_inmatriculare.year - varsta
+                if anul_nasterii >= 1924:
+                    break
+
+            gen = 'M' if _ < numar_baieti else 'F'
+            student = Student(gen, varsta, data_inmatriculare)
             if student not in lista_studenti:
                 lista_studenti.append(student)
 
